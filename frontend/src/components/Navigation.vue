@@ -15,6 +15,7 @@ defineProps({
 const navItems = [
   { title: 'Home', icon: 'mdi-home', to: '/' },
   { title: 'Companies', icon: 'mdi-domain', to: '/companies' },
+  { title: 'Add Company', icon: 'mdi-magnify', to: '/company-search' }
 ]
 </script>
 
