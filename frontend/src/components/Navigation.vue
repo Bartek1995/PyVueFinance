@@ -14,8 +14,7 @@ defineProps({
 
 const navItems = [
   { title: 'Home', icon: 'mdi-home', to: '/' },
-  { title: 'Portfolio', icon: 'mdi-finance', to: '/portfolio' },
-  { title: 'Stocks', icon: 'mdi-chart-line', to: '/stocks' },
+  { title: 'Companies', icon: 'mdi-domain', to: '/companies' },
 ]
 </script>
 
