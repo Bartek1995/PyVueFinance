@@ -34,16 +34,23 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
+AUTH_USER_MODEL = 'accounts.CustomUser'  # Use the custom user model
 
 # Application definition
 
 INSTALLED_APPS = [
+    ## Core apps
     "django.contrib.admin",
     "django.contrib.auth",
     "django.contrib.contenttypes",
     "django.contrib.sessions",
     "django.contrib.messages",
     "django.contrib.staticfiles",
+    
+    # Custom apps
+    "accounts", # Custom user model app
+    "portfolio", # Portfolio management app
+    
 ]
 
 MIDDLEWARE = [
