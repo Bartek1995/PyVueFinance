@@ -29,7 +29,7 @@ const navItems = [
   >
     <v-list>
       <v-list-item>
-        <v-list-item-title class="text-h6 font-weight-bold"> PyVueFinance </v-list-item-title>
+        <v-list-item-title class="text-h6 font-weight-bold">PyVueFinance</v-list-item-title>
       </v-list-item>
       <v-divider />
       <v-list-item
@@ -37,11 +37,11 @@ const navItems = [
         :key="item.title"
         :to="item.to"
         link
-        component="RouterLink"
+        :component="RouterLink"
       >
-        <v-list-item-icon>
+        <template #prepend>
           <v-icon>{{ item.icon }}</v-icon>
-        </v-list-item-icon>
+        </template>
         <v-list-item-title>{{ item.title }}</v-list-item-title>
       </v-list-item>
     </v-list>
