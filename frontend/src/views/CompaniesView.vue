@@ -29,7 +29,6 @@ const headers = [
 </script>
 
 <template>
-  <v-container>
     <v-card>
       <v-card-title>
         <v-icon class="me-2">mdi-domain</v-icon>
@@ -50,5 +49,4 @@ const headers = [
         </v-data-table>
       </v-card-text>
     </v-card>
-  </v-container>
 </template>
