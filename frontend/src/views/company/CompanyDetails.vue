@@ -1,7 +1,7 @@
 <template>
     <v-container fluid class="py-4">
       <v-row>
-        <v-col cols="12" md="7">
+        <v-col cols="12" lg="7">
           <!-- Karta z informacjami o spółce -->
           <v-card class="mb-4" elevation="2">
             <v-card-title class="text-h5">
@@ -34,7 +34,7 @@
             </v-card-text>
           </v-card>
         </v-col>
-        <v-col cols="12" md="5">
+        <v-col cols="12" lg="5">
           <v-card elevation="2">
             <v-card-title class="text-h6">
               <v-icon class="me-2">mdi-chart-line</v-icon>
@@ -73,7 +73,7 @@
   import { ref, onMounted, watch } from 'vue'
   import { useRoute } from 'vue-router'
   import { useTheme } from 'vuetify'
-  import api from '@/apiService'
+  import api from '@/api/apiService'
   
   const route = useRoute()
   const company = ref({})

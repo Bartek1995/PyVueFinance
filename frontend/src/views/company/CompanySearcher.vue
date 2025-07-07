@@ -1,6 +1,6 @@
 <script setup>
 import { ref } from 'vue'
-import api from '@/apiService'
+import api from '@/api/apiService'
 
 const ticker = ref('')
 const start = ref('')

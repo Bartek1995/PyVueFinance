@@ -1,21 +1,28 @@
 <script setup>
 import { ref } from 'vue'
-import Navigation from './components/Navigation.vue'
+import Navigation from '@/layouts/Navigation.vue'
+import AppBar from '@/layouts/AppBar.vue'
 import { RouterView } from 'vue-router'
+import { useAuthStore } from '@/stores/auth'
 
 const drawer = ref(true)
+const auth = useAuthStore()
 </script>
 
 <template>
   <v-app>
-    <Navigation v-model:drawer="drawer" />
-    <v-app-bar app>
-      <v-app-bar-nav-icon @click="drawer = !drawer"></v-app-bar-nav-icon>
-      <v-toolbar-title>PyVueFinance</v-toolbar-title>
-      <v-spacer />
-    </v-app-bar>
+    <Navigation
+      v-if="auth.isLoggedIn"
+      :drawer="drawer"
+      @update:drawer="drawer = $event"
+    />
+    <AppBar
+      v-if="auth.isLoggedIn"
+      :drawer="drawer"
+      @update:drawer="drawer = $event"
+    />
     <v-main>
-      <v-container class="py-6" fluid>
+      <v-container fluid class="py-6">
         <RouterView />
       </v-container>
     </v-main>
